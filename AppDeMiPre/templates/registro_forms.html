@@ -1,0 +1,24 @@
+
+{% extends 'padre.html' %}
+
+{%load static%}
+
+{% block section %}
+<form action="{%url 'alta_usuario'%}" method="POST">
+  {%csrf_token%}
+    <div class="mb-3">
+      <label for="text" class="form-label">Nombre de usuario</label>
+      <input type="text" class="form-control" id="text" aria-describedby="emailHelp" name="nombre" required>
+      <div id="emailHelp" class="form-text">Este será el nombre de usuario que utilizarás</div>
+    </div>
+    <div class="mb-3">
+        <div class="mb-3">
+          <label for="text" class="form-label">Rol</label>
+          <input type="text" class="form-control" id="text" aria-describedby="emailHelp" name="rol" required>
+          <div id="emailHelp" class="form-text">Dinos si eres Vendedor, proveedor o comprador</div>
+        </div>
+          </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
+{% endblock %}

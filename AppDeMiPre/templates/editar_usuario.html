@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{%load static%}
+
+{%block section%}
+
+    <form action="">
+        {% csrf_token %}
+        <p>Nombre</p>
+        {{mi_formulario.nombre}}
+        
+        <p>Rol</p>
+        {{mi_formulario.rol}}
+
+        <button class="btn btn-primary">Enviar</button>
+    </form>
+
+
+{%endblock%}
